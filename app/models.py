@@ -63,10 +63,10 @@ class Livro(models.Model):
         verbose_name = "Livro"
         verbose_name_plural = "Livros"
 
-class Emprestimo(models.Model):
-    fazeremprestimo = models.DateField(verbose_name= "Data de empréstimo", default=datetime.date.today)
-    fazerdevolucao = models.DateField(verbose_name= "Data de devolução", default=datetime.date.today)
-    livro = models.ForeignKey(Livro, on_delete=models.CASCADE, verbose_name="Nome do livro emprestado")
-    leitor = models.ForeignKey(Leitor, on_delete=models.CASCADE, verbose_name="Nome do leitor emprestado")
-    def __str__(self):
-        return f'{self.livro}, {self.leitor}, {self.fazeremprestimo}, {self.fazerdevolucao}'
+# class Emprestimo(models.Model):
+#     fazeremprestimo = models.DateField(verbose_name= "Data de empréstimo", default=datetime.date.today)
+#     fazerdevolucao = models.DateField(verbose_name= "Data de devolução", default=datetime.date.today)
+#     livro = models.ForeignKey(Livro, on_delete=models.CASCADE, verbose_name="Nome do livro emprestado")
+#     leitor = models.ForeignKey(Leitor, on_delete=models.CASCADE, verbose_name="Nome do leitor emprestado")
+#     def __str__(self):
+#         return f'{self.livro}, {self.leitor}, {self.fazeremprestimo}, {self.fazerdevolucao}'
